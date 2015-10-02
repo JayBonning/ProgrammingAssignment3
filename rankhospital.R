@@ -31,7 +31,7 @@ rankhospital <- function(stateName, outcome, num = "best") {
   validRecords <- subset(validRecords,complete.cases(validRecords))
   
   #sort the records
-  sortedRecords <- validRecords[order(validRecords[,1]), 1:3 ]
+  sortedRecords <- validRecords[order(validRecords[,1], validRecords[,3]), 1:3 ]
   
   #account for "special" input
   if(num == "best")
